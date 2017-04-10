@@ -1,0 +1,15 @@
+{
+  "name": "hacklab-mikkeli-yhdistysavain-export",
+  "version": "1.0.0",
+  "description": "Exports monthly subscribers from yhdistysavain.fi and converts them to format compatible with door lock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Belvain",
+  "license": "MIT",
+  "dependencies": {
+    "casper-nodejs": "^1.0.0",
+    "xlsx": "^0.9.10"
+  }
+}
