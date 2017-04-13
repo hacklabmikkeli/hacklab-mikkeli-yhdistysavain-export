@@ -49,7 +49,7 @@
       if (phone.startsWith('0')) {
         phone = '+358' + phone.substring(1);
       }
-      results += util.format('%s %s\n%s\n\n', fname, lname, phone);
+      results += util.format('%s %s\n%s\n', fname, lname, phone);
     }
     fs.writeFile(options.output, results, () => {
       console.log('done');
