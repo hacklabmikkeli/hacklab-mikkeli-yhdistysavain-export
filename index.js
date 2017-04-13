@@ -9,7 +9,15 @@
   const fs = require('fs');
   const util = require('util');
   const casper_nodejs = require('casper-nodejs');
-  const casper = casper_nodejs.create('https://hacklabmikkeli.yhdistysavain.fi/@Session/Loginform', {});
+  const commandLineArgs = require('command-line-args')
+ 
+  const optionDefinitions = [
+    { name: 'output', alias: 'o', type: String }
+  ];
+  
+  const options = commandLineArgs(optionDefinitions);
+  
+  const casper = casper_nodejs.create(conf.loginurl, {});
 
   casper.then([function (settings) {
     this.fillSelectors('form[name="login"]', {
@@ -43,7 +51,7 @@
       }
       results += util.format('%s %s\n%s\n\n', fname, lname, phone);
     }
-    fs.writeFile('whitelist.txt', results, () => {
+    fs.writeFile(options.output, results, () => {
       console.log('done');
     });
   });

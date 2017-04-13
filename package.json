@@ -4,12 +4,14 @@
   "description": "Exports monthly subscribers from yhdistysavain.fi and converts them to format compatible with door lock",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Belvain",
   "license": "MIT",
   "dependencies": {
     "casper-nodejs": "^1.0.0",
+    "command-line-args": "4.0.2",
     "xlsx": "^0.9.10"
   }
 }
